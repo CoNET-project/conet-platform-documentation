@@ -14,6 +14,24 @@ import { platform } from 'API/platfrom'
 
 Creates a new instance of **platform**.
 
+
+
+**platform.passcode**
+
+CONET Platform status.
+
+**LOCKED**: user need unlock first before use the platform function.
+
+**UNLOCKED**: the platform is ready.
+
+**NONE**: CONET Platform is the first time to launched.
+
+
+
+**platform.create()**
+
+
+
 \
 
 
