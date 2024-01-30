@@ -12,7 +12,9 @@ The CONET platform based on the Progressive Web Apps (PWA) which can reach anyon
 
 <figure><img src=".gitbook/assets/a-graph-illustrating-rel-8f0fbfba2c3e8.svg" alt=""><figcaption></figcaption></figure>
 
+[**TypeScript**](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
 
+TypeScript is JavaScript’s runtime with a compile-time type checker. CONET platform uses TpeScript to improve programming quality.
 
 **Decentralized APP Store**
 

@@ -63,9 +63,11 @@ This function only available when platform.passcode is "NONE"
 
 **platform.deleteAccount()**
 
-Returns: Promise\<boolean>
+* Returns: Promise\<boolean>
+* return resolve: true: success. false: fail
+* return reject: Never.
 
-return resolve: true: success. false: fail
+
 
 
 
