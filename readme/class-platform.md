@@ -14,6 +14,8 @@ import { platform } from 'API/platfrom'
 
 **new platform()**
 
+* Returns:  Instance of [class](https://www.typescriptlang.org/docs/handbook/2/classes.html) platform.
+
 Creates a new instance of platform.
 
 
@@ -42,8 +44,10 @@ Class platform is initialization failed. Daemon worker hasn't ready or initializ
 
 **platform.createAccount(passcode)**
 
+* Returns: Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
+* return resolve: 12 words Secret Recovery Phrase (SRP) or zero length (create account was fail)
+* return reject: Never.
 * passcode <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> length > 5
-* Returns: <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]> 12 words Secret Recovery Phrase (SRP) or zero length (create account was fail)
 
 This function only available when platform.passcode is "NONE"
 
@@ -51,5 +55,17 @@ This function only available when platform.passcode is "NONE"
 
 **platform.showSRP()**
 
-* Returns: <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]> 12 words Secret Recovery Phrase (SRP) or zero length (unavailable)
+* Returns: Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
+* return resolve: 12 words Secret Recovery Phrase (SRP) or zero length (unavailable)
+* return reject: Never.
+
+
+
+**platform.deleteAccount()**
+
+Returns: Promise\<boolean>
+
+return resolve: true: success. false: fail
+
+
 
