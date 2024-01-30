@@ -40,8 +40,16 @@ Class platform is initialization failed. Daemon worker hasn't ready or initializ
 
 
 
-**platform.createAccount(**passcode: string**)**
+**platform.createAccount(passcode)**
 
-\
+* passcode <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> length > 5
+* Returns: <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]> 12 words Secret Recovery Phrase (SRP) or zero length (create account was fail)
 
+This function only available when platform.passcode is "NONE"
+
+
+
+**platform.showSRP()**
+
+* Returns: <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]> 12 words Secret Recovery Phrase (SRP) or zero length (unavailable)
 
