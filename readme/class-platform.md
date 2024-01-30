@@ -10,15 +10,17 @@ This class provides platform-level operations, and typically requires presenting
 import { platform } from 'API/platfrom'
 ```
 
+
+
 **new platform()**
 
-Creates a new instance of **platform**.
+Creates a new instance of platform.
 
 
 
-**platform.passcode**
+**platform.passcode**&#x20;
 
-CONET Platform status.
+* <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> READ ONLY. CONET Platform status.
 
 **LOCKED**: user need unlock first before use the platform function.
 
@@ -26,11 +28,19 @@ CONET Platform status.
 
 **NONE**: CONET Platform is the first time to launched.
 
+**Empty string**
+
+```typescript
+typeof platform.passcode === 'string' && 
+    ( platform.passcode === '' || 
+    !platform.passcode.length )
+```
+
+Class platform is initialization failed. Daemon worker hasn't ready or initialization failed.
 
 
-**platform.create()**
 
-
+**platform.createAccount(**passcode: string**)**
 
 \
 
