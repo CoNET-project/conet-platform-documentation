@@ -20,34 +20,31 @@ Creates a new instance of platform.
 
 
 
-**platform.passcode**&#x20;
+**platform.passcode()**
 
-* <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> READ ONLY. CONET Platform status.
+* **Returns**: Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>&#x20;
+* **Return resolve**: LOCKED | UNLOCKED | NONE | ''
+* **Return reject**: Never.
+* **LOCKED**: user need unlock first before use the platform function.
+* **UNLOCKED**: the platform is ready.
+* **NONE**: CONET Platform is the first time to launched.
+*   **Empty string:** Class platform is initialization failed. Daemon worker hasn't ready or initialization failed.
 
-**LOCKED**: user need unlock first before use the platform function.
+    ```typescript
+        typeof platform.passcode === 'string' && ( platform.passcode === '' || 
+        !platform.passcode.length )
+    ```
 
-**UNLOCKED**: the platform is ready.
-
-**NONE**: CONET Platform is the first time to launched.
-
-**Empty string**
-
-```typescript
-typeof platform.passcode === 'string' && 
-    ( platform.passcode === '' || 
-    !platform.passcode.length )
-```
-
-Class platform is initialization failed. Daemon worker hasn't ready or initialization failed.
+Platform status.
 
 
 
 **platform.createAccount(passcode)**
 
-* Returns: Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
-* return resolve: 12 words Secret Recovery Phrase (SRP) or zero length (create account was fail)
-* return reject: Never.
-* passcode <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> length > 5
+* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
+* **Return resolve**: 12 words Secret Recovery Phrase (SRP) or zero length (create account was fail)
+* **Return reject**: Never.
+* **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
 
 This function only available when platform.passcode is "NONE"
 
@@ -55,17 +52,17 @@ This function only available when platform.passcode is "NONE"
 
 **platform.showSRP()**
 
-* Returns: Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
-* return resolve: 12 words Secret Recovery Phrase (SRP) or zero length (unavailable)
-* return reject: Never.
+* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
+* **Return resolve**: 12 words Secret Recovery Phrase (SRP) or zero length (unavailable)
+* **return reject**: Never.
 
 
 
 **platform.deleteAccount()**
 
-* Returns: Promise\<boolean>
-* return resolve: true: success. false: fail
-* return reject: Never.
+* **Returns**: Promise\<boolean>
+* **Return resolve**: **true**: success. **false**: fail
+* **Return reject**: Never.
 
 
 
