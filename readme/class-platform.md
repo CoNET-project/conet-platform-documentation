@@ -7,35 +7,22 @@ This class provides platform-level operations, and typically requires presenting
 **Class platform**
 
 ```typescript
-import { platform } from 'API/platfrom'
+import { platform， type_platformStatus } from 'API/platfrom'
+
+const [platformStatus, setPlatformStatus] = useState<type_passcode>('')
+const [workerLoading, setWorkerLoading] = useState（0)
+const conetPlatform = new platform(setPlatformStatus, setWorkerLoading)
+
 ```
 
+**new platform(platformStatus, workerLoading)**
 
-
-**new platform()**
-
+* setPlatformStatus: React.Dispatch\<React.SetStateAction\<type\_platformStatus>>
+* type\_platformStatus: 'LOCKED'|'UNLOCKED'|'NONE'
+* setWorkerLoading: React.Dispatch\<React.SetStateAction>
 * Returns:  Instance of [class](https://www.typescriptlang.org/docs/handbook/2/classes.html) platform.
 
-Creates a new instance of platform.
-
-
-
-**platform.passcode()**
-
-* **Returns**: Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>&#x20;
-* **Return resolve**: LOCKED | UNLOCKED | NONE | ''
-* **Return reject**: Never.
-* **LOCKED**: user need unlock first before use the platform function.
-* **UNLOCKED**: the platform is ready.
-* **NONE**: CONET Platform is the first time to launched.
-*   **Empty string:** Class platform is initialization failed. Daemon worker hasn't ready or initialization failed.
-
-    ```typescript
-        typeof platform.passcode === 'string' && ( platform.passcode === '' || 
-        !platform.passcode.length )
-    ```
-
-Platform status.
+Creates a new instance of platform. Monitor the percentage of backend processes being loaded by **setWorkerLoading**, Show client status when loading is complete by **setPlatformStatus.**
 
 
 
