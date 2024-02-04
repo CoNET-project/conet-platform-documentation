@@ -20,7 +20,7 @@ const conetPlatform = new platform(setPlatformStatus, setWorkerLoading)
 
 * setPlatformStatus: React.Dispatch\<React.SetStateAction\<type\_platformStatus>>
 * type\_platformStatus: 'LOCKED'|'UNLOCKED'|'NONE'
-* setWorkerLoading: React.Dispatch\<React.SetStateAction>
+* setWorkerLoading: React.Dispatch\<React.SetStateAction\<number>>: from0\~100
 * Returns:  Instance of [class](https://www.typescriptlang.org/docs/handbook/2/classes.html) platform.
 
 Creates a new instance of platform. Monitor the percentage of backend processes being loaded by **setWorkerLoading**, Show client status when loading is complete by **setPlatformStatus.**
