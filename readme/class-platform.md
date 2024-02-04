@@ -11,6 +11,7 @@ import { platform， type_platformStatus } from 'API/platfrom'
 
 const [platformStatus, setPlatformStatus] = useState<type_passcode>('')
 const [workerLoading, setWorkerLoading] = useState（0)
+
 const conetPlatform = new platform(setPlatformStatus, setWorkerLoading)
 
 ```
