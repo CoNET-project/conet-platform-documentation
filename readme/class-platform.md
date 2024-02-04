@@ -9,7 +9,7 @@ This class provides platform-level operations, and typically requires presenting
 ```typescript
 import { platform， type_platformStatus } from 'API/platfrom'
 
-const [platformStatus, setPlatformStatus] = useState<type_passcode>('')
+const [platformStatus, setPlatformStatus] = useState<type_platformStatus>('')
 const [workerLoading, setWorkerLoading] = useState（0)
 
 const conetPlatform = new platform(setPlatformStatus, setWorkerLoading)
