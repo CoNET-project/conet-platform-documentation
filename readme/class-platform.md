@@ -29,12 +29,20 @@ Creates a new instance of platform. Monitor the percentage of backend processes 
 
 **platform.createAccount(passcode)**
 
-* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
-* **Return resolve**: 12 words Secret Recovery Phrase (SRP) or zero length (create account was fail)
+* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>
+* **Return resolve**: 12 words Secret Recovery Phrase (SRP) split by space, zero length string (create account was fail)
 * **Return reject**: Never.
 * **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
 
 This function only available when platform.passcode is "NONE"
+
+
+
+**platform.testPasscode(passcode)**
+
+* **Returns:** Promise\<boolean>
+* **Return resolve**: success when true, fail when false.
+* **Return reject**: Never.
 
 
 
