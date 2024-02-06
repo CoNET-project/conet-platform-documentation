@@ -40,7 +40,7 @@ This function only available when platform.passcode is "NONE"
 
 **platform.testPasscode(passcode)**
 
-* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>
+* **Returns:** Promise\<boolean>
 * **Return resolve**:  when true, fail when false.
 * **Return reject**: Never.
 * **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
