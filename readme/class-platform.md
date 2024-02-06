@@ -18,7 +18,7 @@ const conetPlatform = new platform(setPlatformStatus, setWorkerLoading)
 
 **new platform(platformStatus, workerLoading)**
 
-* setPlatformStatus: React.Dispatch\<React.SetStateAction\<type\_platformStatus>>
+* setPlatformStatus: [React.Dispatch](https://react-redux.js.org/api/hooks)\<React.SetStateAction\<type\_platformStatus>>
 * type\_platformStatus: 'LOCKED'|'UNLOCKED'|'NONE'
 * setWorkerLoading: React.Dispatch\<React.SetStateAction\<number>>: from0\~100
 * Returns:  Instance of [class](https://www.typescriptlang.org/docs/handbook/2/classes.html) platform.
@@ -40,9 +40,10 @@ This function only available when platform.passcode is "NONE"
 
 **platform.testPasscode(passcode)**
 
-* **Returns:** Promise\<boolean>
-* **Return resolve**: success when true, fail when false.
+* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>
+* **Return resolve**:  when true, fail when false.
 * **Return reject**: Never.
+* **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
 
 
 
