@@ -58,6 +58,15 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
+**platform.currentProfile()**
+
+* **Returns:** Promise\<profile>
+* **Return resolve**: profile or null (unavailable)
+* **return reject**: Never.
+* **Require:** Class platform has complete authorization.
+
+
+
 **platform.deleteAccount()**
 
 * **Returns**: Promise\<boolean>
