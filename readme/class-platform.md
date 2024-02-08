@@ -45,7 +45,9 @@ This function only available when platform.passcode is "NONE"
 * **Return reject**: Never.
 * **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
 
-Class platform will get authorization key from backend which can access user private data after passcode is success.
+**platformStatus** will be update to **UNLOCKED** when passcode success.
+
+Class platform will get authorization key from backend which can access user private data after passcode is success.&#x20;
 
 
 
