@@ -60,10 +60,10 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
-**platform.currentProfile()**
+**platform.getAllProfiles()**
 
-* **Returns:** Promise\<profile>
-* **Return resolve**: profile or null (unavailable)
+* **Returns:** Promise\<profile\[]>
+* **Return resolve**: All profiles or null array (unavailable)
 * **return reject**: Never.
 * **Require:** Class platform has complete authorization.
 
