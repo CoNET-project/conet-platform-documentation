@@ -53,8 +53,8 @@ Class platform will get authorization key from backend which can access user pri
 
 **platform.showSRP()**
 
-* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) \[]>
-* **Return resolve**: 12 words Secret Recovery Phrase (SRP) or zero length (unavailable)
+* **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>
+* **Return resolve**: 12 words Secret Recovery Phrase (SRP) split by space or zero length string (unavailable)
 * **return reject**: Never.
 * **Require:** Class platform has complete authorization.
 
