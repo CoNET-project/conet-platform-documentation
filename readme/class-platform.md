@@ -34,14 +34,14 @@ Creates a new instance of platform. Monitor the percentage of backend processes 
 * **Return reject**: Never.
 * **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
 
-This function only available when platform.passcode is "NONE"
+This function only available when **platformStatus** is "NONE"
 
 
 
 **platform.testPasscode(passcode)**
 
-* **Returns:** Promise\<boolean>
-* **Return resolve**:  when true, fail when false.
+* **Returns:** Promise<\[passcodeStatus: boolean, authorizationKey: string]>
+* **Return resolve**:  Unlock wallet success when passcodeStatus is true, return **authorizationKey**. Unlock wallet fail when passcodeStatus was false.
 * **Return reject**: Never.
 * **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
 
@@ -51,8 +51,9 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
-**platform.showSRP()**
+**platform.showSRP(**authorizationKey**)**
 
+* **authorizationKey:** The access authorization which return from success testPasscode.
 * **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>
 * **Return resolve**: 12 words Secret Recovery Phrase (SRP) split by space or zero length string (unavailable)
 * **return reject**: Never.
