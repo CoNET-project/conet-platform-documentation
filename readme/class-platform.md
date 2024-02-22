@@ -68,7 +68,27 @@ Class platform will get authorization key from backend which can access user pri
 * **return reject**: Never.
 * **Require:** Class platform has complete authorization.
 
-
+```typescript
+interface pgpKey {
+	privateKeyArmor: string
+	publicKeyArmor: string
+}
+interface token {
+	balance: string
+	name: string
+	symbol: string
+	erc20Address: string
+	history: tokenHistory[]
+}
+interface profile {
+	isPrimary: boolean			//	true: current profile
+	keyID: string 				//	Wallet Address
+	pgpKey: pgpKey				//		
+	referrer: string			
+	tokens: token[]
+	data?: any				//	UI custom data, like nickname
+}
+```
 
 **platform.deleteAccount()**
 
