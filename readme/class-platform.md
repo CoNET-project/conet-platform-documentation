@@ -6,15 +6,40 @@ This class provides platform-level operations, and typically requires presenting
 
 **Class platform**
 
-```typescript
-import { platform， type_platformStatus } from 'API/platfrom'
-
-const [platformStatus, setPlatformStatus] = useState<type_platformStatus>('')
+<pre class="language-typescript"><code class="lang-typescript"><strong>import { platform， type_platformStatus } from 'API/platfrom'
+</strong>
+const [platformStatus, setPlatformStatus] = useState&#x3C;type_platformStatus>('')
 const [workerLoading, setWorkerLoading] = useState（0)
 
 const conetPlatform = new platform(setPlatformStatus, setWorkerLoading)
+</code></pre>
 
+**Type profile**
+
+```typescript
+interface pgpKey {
+	privateKeyArmor: string
+	publicKeyArmor: string
+}
+interface token {
+	balance: string
+	name: string
+	symbol: string
+	erc20Address: string
+	history: tokenHistory[]
+}
+interface profile {
+	isPrimary: boolean			//	true: current profile
+	keyID: string 				//	Wallet Address
+	pgpKey: pgpKey				//
+	privateKeyArmor: string			//	Wallet private key		
+	referrer: string			
+	tokens: token[]
+	data?: any				//	UI custom data, like nickname
+}
 ```
+
+
 
 **new platform(platformStatus, workerLoading)**
 
@@ -53,7 +78,7 @@ Class platform will get authorization key from backend which can access user pri
 
 **platform.showSRP(**authorizationKey**)**
 
-* **authorizationKey:** The access authorization which return from success testPasscode.
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> The access authorization which return from success testPasscode.
 * **Returns:** Promise<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>
 * **Return resolve**: 12 words Secret Recovery Phrase (SRP) split by space or zero length string (unavailable)
 * **return reject**: Never.
@@ -61,34 +86,36 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
-**platform.getAllProfiles()**
+**platform.getAllProfiles(**authorizationKey**)**
 
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  The access authorization which return from success testPasscode.
 * **Returns:** Promise\<profile\[]>
 * **Return resolve**: All profiles or null array (unavailable)
 * **return reject**: Never.
 * **Require:** Class platform has complete authorization.
 
-```typescript
-interface pgpKey {
-	privateKeyArmor: string
-	publicKeyArmor: string
-}
-interface token {
-	balance: string
-	name: string
-	symbol: string
-	erc20Address: string
-	history: tokenHistory[]
-}
-interface profile {
-	isPrimary: boolean			//	true: current profile
-	keyID: string 				//	Wallet Address
-	pgpKey: pgpKey				//		
-	referrer: string			
-	tokens: token[]
-	data?: any				//	UI custom data, like nickname
-}
-```
+
+
+**platform.importWallet(**authorizationKey, privateKey, data**)**
+
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  The access authorization which return from success testPasscode.
+* **privateKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  The private key.
+* **data** \<any> UI custom data. example want put a "import" TAG.
+* **Returns:** Promise\<profile\[]>
+* **Return resolve**: All profiles or null array (when private key or authorizationKey is illegal.)
+* **return reject**: Never.
+
+
+
+**platform.updateProfile(**authorizationKey, profile**)**
+
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  The access authorization which return from success testPasscode.
+* profile\<profile> Include UI custom data.
+* **Returns:** Promise\<profile\[]>
+* **Return resolve**: All profiles or null array (when profile or authorizationKey is illegal.)
+* **return reject**: Never.
+
+
 
 **platform.deleteAccount()**
 
