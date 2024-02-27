@@ -103,7 +103,8 @@ Class platform will get authorization key from backend which can access user pri
 * **data** \<any> UI custom data. example want put a "import" TAG.
 * **Returns:** Promise\<profile\[]>
 * **Return resolve**: All profiles or null array (when private key or authorizationKey is illegal.)
-* **return reject**: Never.
+* **Return reject**: Never.
+* **Require:** Class platform has complete authorization.
 
 
 
@@ -113,7 +114,19 @@ Class platform will get authorization key from backend which can access user pri
 * profile\<profile> Include UI custom data.
 * **Returns:** Promise\<profile\[]>
 * **Return resolve**: All profiles or null array (when profile or authorizationKey is illegal.)
-* **return reject**: Never.
+* **Return reject**: Never.
+* **Require:** Class platform has complete authorization.
+
+
+
+**platform.addProfile(**authorizationKey, data**)**
+
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  The access authorization which return from success testPasscode.
+* **data** \<any> UI custom data. example want put a "import" TAG.
+* **Returns:** Promise\<profile\[]>
+* **Return resolve**: All profiles or null array (when authorizationKey is illegal.)
+* **Return reject**: Never.
+* **Require:** Class platform has complete authorization.
 
 
 
