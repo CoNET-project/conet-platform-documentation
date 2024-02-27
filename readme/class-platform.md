@@ -76,6 +76,16 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
+**platform.resetPasscode(oldPasscode, newPasscode)**
+
+* **Returns:** Promise<\[passcodeStatus: boolean, authorizationKey: string]>
+* **Return resolve**:  Unlock wallet success when reset passcode was down, return **authorizationKey**. Unlock wallet fail when passcodeStatus was false.
+* **Return reject**: Never.
+* **oldPasscode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
+* **newPasscode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
+
+
+
 **platform.showSRP(**authorizationKey**)**
 
 * **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> The access authorization which return from success testPasscode.
