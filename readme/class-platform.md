@@ -86,6 +86,16 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
+**platform.recoverAccount(SRP, passcode)**
+
+* **Returns:** Promise\<authorizationKey: string>
+* **Return resolve**:  Return **authorizationKey** when recover Account from SRP, or null when recover fail.&#x20;
+* **Return reject**: Never.
+* **SRP** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  12 words Secret Recovery Phrase (SRP) split by space.
+* **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5) The new passcode for securus account.
+
+
+
 **platform.showSRP(**authorizationKey**)**
 
 * **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> The access authorization which return from success testPasscode.
