@@ -74,7 +74,7 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
-**platform.getReferees(**authorizationKey, wallet\_public\_key**)**
+**platform.getRefereesList(**authorizationKey, wallet\_public\_key**)**
 
 * **Returns:** Promise\<refereesTree\[]>
 
