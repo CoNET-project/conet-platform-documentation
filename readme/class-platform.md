@@ -39,25 +39,6 @@ interface profile {
 }
 ```
 
-```typescript
-//    referees result examples
-referees: [
-    'keyID5%-1': [
-        'keyID5%-1-3%-1': [
-            'keyID5%-1-3%-1-1%-1','keyID5%-1-3%-1-1%-2'
-        ],
-        'keyID5%-1-3%-2': [
-            'keyID1%1'
-        ],
-    ],
-    'keyID5%-2': [
-        'keyID5%-2-3%-1': [
-            'keyID5%-2-3%-1-1%-1'
-        ],
-    ]
-]
-```
-
 **new platform(platformStatus, workerLoading)**
 
 * setPlatformStatus: [React.Dispatch](https://react-redux.js.org/api/hooks)\<React.SetStateAction\<type\_platformStatus>>
