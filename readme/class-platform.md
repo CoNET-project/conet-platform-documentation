@@ -79,22 +79,18 @@ Class platform will get authorization key from backend which can access user pri
 * **Returns:** Promise\<refereesTree\[]>
 
 ```typescript
-//    refereesTree result examples
-refereesTree: [
-    'wallet5%-1': [
-        'wallet5%-1-3%-1': [
-            'wallet5%-1-3%-1-1%-1','wallet5%-1-3%-1-1%-2'
-        ],
-        'wallet5%-1-3%-2': [
-            'wallet5%-1-3%-2-1%-1'
-        ],
-    ],
-    'wallet5%-2': [
-        'wallet5%-2-3%-1': [
-            'wallet5%-2-3%-1-1%-1'
-        ],
+//    refereesTree result examples 0x7Bc3FEA6Fc415CD1c36cf5CCA31786Cb3823A4b2
+refereesTree: {
+    '0x7Bc3FEA6Fc415CD1c36cf5CCA31786Cb3823A4b2': [
+        {
+            '0x8b02ec615B7a2d5B82F746F990062459DF996c48':[
+                { '0x04441E4BC3A8842473Fe974DB4351f0b126940be': [] },
+                { '0xE30B823Aeb7d199D980b7480EC5667108DC583DD': [] },
+                { '0x318a3927EBDE5e06b0f9c7F1012C84e69916f5Fc': [] }
+            ]
+        }
     ]
-]
+}
 ```
 
 * **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> The access authorization which return from success testPasscode.
