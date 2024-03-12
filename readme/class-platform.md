@@ -81,17 +81,17 @@ Class platform will get authorization key from backend which can access user pri
 ```typescript
 //    refereesTree result examples
 refereesTree: [
-    'keyID5%-1': [
-        'keyID5%-1-3%-1': [
-            'keyID5%-1-3%-1-1%-1','keyID5%-1-3%-1-1%-2'
+    'wallet5%-1': [
+        'wallet5%-1-3%-1': [
+            'wallet5%-1-3%-1-1%-1','wallet5%-1-3%-1-1%-2'
         ],
-        'keyID5%-1-3%-2': [
-            'keyID1%1'
+        'wallet5%-1-3%-2': [
+            'wallet5%-1-3%-2-1%-1'
         ],
     ],
-    'keyID5%-2': [
-        'keyID5%-2-3%-1': [
-            'keyID5%-2-3%-1-1%-1'
+    'wallet5%-2': [
+        'wallet5%-2-3%-1': [
+            'wallet5%-2-3%-1-1%-1'
         ],
     ]
 ]
