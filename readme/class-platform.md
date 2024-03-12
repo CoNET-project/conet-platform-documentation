@@ -79,15 +79,12 @@ Class platform will get authorization key from backend which can access user pri
 * **Returns:** Promise\<refereesTree\[]>
 
 ```typescript
-//    refereesTree result examples 0x7Bc3FEA6Fc415CD1c36cf5CCA31786Cb3823A4b2
+//    refereesTree result examples 0x04441E4BC3A8842473Fe974DB4351f0b126940be
 refereesTree: {
-    '0x7Bc3FEA6Fc415CD1c36cf5CCA31786Cb3823A4b2': [
+    '0x4fa1FC4a2a96D77E8521628268631F735E2CcBee':[
         {
-            '0x8b02ec615B7a2d5B82F746F990062459DF996c48':[
-                { '0x04441E4BC3A8842473Fe974DB4351f0b126940be': [] },
-                { '0xE30B823Aeb7d199D980b7480EC5667108DC583DD': [] },
-                { '0x318a3927EBDE5e06b0f9c7F1012C84e69916f5Fc': [] }
-            ]
+            '0xDBaa41dd7CABE1D5Ca41d38E8F768f94D531d85A': 
+                ['0xc9043f661ADddCAF902d45D220e7aea38920d188'] 
         }
     ]
 }
