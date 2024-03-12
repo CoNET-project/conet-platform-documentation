@@ -39,7 +39,24 @@ interface profile {
 }
 ```
 
-
+```typescript
+//    referees result examples
+referees: [
+    'keyID5%-1': [
+        'keyID5%-1-3%-1': [
+            'keyID5%-1-3%-1-1%-1','keyID5%-1-3%-1-1%-2'
+        ],
+        'keyID5%-1-3%-2': [
+            'keyID1%1'
+        ],
+    ],
+    'keyID5%-2': [
+        'keyID5%-2-3%-1': [
+            'keyID5%-2-3%-1-1%-1'
+        ],
+    ]
+]
+```
 
 **new platform(platformStatus, workerLoading)**
 
@@ -73,6 +90,36 @@ This function only available when **platformStatus** is "NONE"
 **platformStatus** will be update to **UNLOCKED** when passcode success.
 
 Class platform will get authorization key from backend which can access user private data after passcode is success.&#x20;
+
+
+
+**platform.getReferees(**authorizationKey, wallet\_public\_key**)**
+
+* **Returns:** Promise\<refereesTree\[]>
+
+```typescript
+//    refereesTree result examples
+refereesTree: [
+    'keyID5%-1': [
+        'keyID5%-1-3%-1': [
+            'keyID5%-1-3%-1-1%-1','keyID5%-1-3%-1-1%-2'
+        ],
+        'keyID5%-1-3%-2': [
+            'keyID1%1'
+        ],
+    ],
+    'keyID5%-2': [
+        'keyID5%-2-3%-1': [
+            'keyID5%-2-3%-1-1%-1'
+        ],
+    ]
+]
+```
+
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> The access authorization which return from success testPasscode.
+* wallet\_public\_key <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> profile.keyID
+
+Return referees tree array.
 
 
 
