@@ -30,11 +30,10 @@ interface token {
 }
 interface profile {
 	isPrimary: boolean			//	true: current profile
-	referrer?: referrer			//	referrer
+	referrer?: referrer			//	referrer only in the first profile. 
 	keyID: string 				//	Wallet Address
 	pgpKey: pgpKey				//
-	privateKeyArmor: string			//	Wallet private key		
-	referrer: string			
+	privateKeyArmor: string			//	Wallet private key
 	tokens: token[]
 	data?: any				//	UI custom data, like nickname
 	
