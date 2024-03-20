@@ -178,8 +178,8 @@ Return referees tree array.
 
 ```typescript
 Price = {
-    BNB: {USD: number}
-    ETH: {USD: number}
+    BNB: {USD: number},
+    ETH: {USD: number},
     USDT: {USD: number}
 }
 ```
