@@ -172,6 +172,22 @@ Return referees tree array.
 
 
 
+**platform.getAssetsPrice()**
+
+* **Returns:** Promise\<price\[]>
+
+```typescript
+Price = {
+    BNB: {USD: number}
+    ETH: {USD: number}
+    USDT: {USD: number}
+}
+```
+
+* **Return reject**: Never.
+
+
+
 **platform.deleteAccount()**
 
 * **Returns**: Promise\<boolean>
