@@ -75,7 +75,7 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
-**platform.getRefereesList(**authorizationKey, wallet\_public\_key**)**
+**platform.getRefereesList(**wallet\_public\_key**)**
 
 * **Returns:** Promise\<refereesTree\[]>
 
@@ -91,7 +91,6 @@ refereesTree: {
 }
 ```
 
-* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> The access authorization which return from success testPasscode.
 * wallet\_public\_key <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> profile.keyID
 
 Return referees tree array.
