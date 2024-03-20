@@ -49,7 +49,7 @@ interface profile {
 
 Creates a new instance of platform. Monitor the percentage of backend processes being loaded by **setWorkerLoading**, Show client status when loading is complete by **setPlatformStatus.**
 
-
+### Security credentials required functions
 
 **platform.createAccount(passcode)**
 
@@ -72,28 +72,6 @@ This function only available when **platformStatus** is "NONE"
 **platformStatus** will be update to **UNLOCKED** when passcode success.
 
 Class platform will get authorization key from backend which can access user private data after passcode is success.&#x20;
-
-
-
-**platform.getRefereesList(**wallet\_public\_key**)**
-
-* **Returns:** Promise\<refereesTree\[]>
-
-```typescript
-//    refereesTree result examples 0x04441E4BC3A8842473Fe974DB4351f0b126940be
-refereesTree: {
-    '0x4fa1FC4a2a96D77E8521628268631F735E2CcBee':[
-        {
-            '0xDBaa41dd7CABE1D5Ca41d38E8F768f94D531d85A': 
-                ['0xc9043f661ADddCAF902d45D220e7aea38920d188'] 
-        }
-    ]
-}
-```
-
-* wallet\_public\_key <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> profile.keyID
-
-Return referees tree array.
 
 
 
@@ -169,7 +147,27 @@ Return referees tree array.
 * **Return reject**: Never.
 * **Require:** Class platform has complete authorization.
 
+### No security credentials required functions
 
+**platform.getRefereesList(**wallet\_public\_key**)**
+
+* **Returns:** Promise\<refereesTree\[]>
+
+```typescript
+//    refereesTree result examples 0x04441E4BC3A8842473Fe974DB4351f0b126940be
+refereesTree: {
+    '0x4fa1FC4a2a96D77E8521628268631F735E2CcBee':[
+        {
+            '0xDBaa41dd7CABE1D5Ca41d38E8F768f94D531d85A': 
+                ['0xc9043f661ADddCAF902d45D220e7aea38920d188'] 
+        }
+    ]
+}
+```
+
+* wallet\_public\_key <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> profile.keyID
+
+Return referees tree array.
 
 **platform.getAssetsPrice()**
 
