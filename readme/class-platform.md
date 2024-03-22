@@ -147,6 +147,28 @@ Class platform will get authorization key from backend which can access user pri
 * **Return reject**: Never.
 * **Require:** Class platform has complete authorization.
 
+
+
+**platform.purchaseNodes(**authorizationKey, nodes, total: number, currency, purchasePrivacyKey, status**)**
+
+* **authorizationKey**<[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)>  The access authorization which return from success testPasscode.
+* **nodes\<number>:** The total number of purchase nodes.
+* **currency\<string>**: The used currency name.
+* **purchasePrivacyKey\<string>**: Use to sign purchase.
+* status\<React.Dispatch\<React.SetStateAction\<purchaseStatus>>>: Hooks to return status.
+
+```typescript
+type purchaseStatus = 
+    'approving'|'approve fail'|        //    USDT, USDB approve process
+    'transferring'|'transfer fail'|    //    ETH, bETH, BNB transfer process
+    'Completing purchase'|            //    Waiting CONET complete purchase process
+    'purchase fail'｜                //    CONET refuses transaction
+    'success'                        //    purchase success
+    'Getting node information'        //    get information from CONET Holesky
+    'Done'                            //    
+    
+```
+
 ### No security credentials required functions
 
 **platform.getRefereesList(**wallet\_public\_key**)**
