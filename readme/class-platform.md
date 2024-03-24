@@ -171,6 +171,12 @@ type purchaseStatus =
 
 ### No security credentials required functions
 
+**platform.CONET**Faucet(privateKey)
+
+* **Returns**: Promise\<boolean> True: success, False: fail. (each 24 hours can request once only.)
+
+
+
 **platform.getRefereesList(**wallet\_public\_key**)**
 
 * **Returns:** Promise\<refereesTree\[]>
