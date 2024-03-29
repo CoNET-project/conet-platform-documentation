@@ -171,7 +171,7 @@ type purchaseStatus =
 
 ### No security credentials required functions
 
-**platform.CONET**Faucet(privateKey)
+**platform.CONETFaucet**(walletPublicAddress)
 
 * **Returns**: Promise\<boolean> True: success, False: fail. (each 24 hours can request once only.)
 
