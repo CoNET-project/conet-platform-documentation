@@ -62,12 +62,13 @@ This function only available when **platformStatus** is "NONE"
 
 
 
-**platform.testPasscode(passcode)**
+**platform.testPasscode(passcode, profileVerHook)**
 
 * **Returns:** Promise<\[passcodeStatus: boolean, authorizationKey: string]>
 * **Return resolve**:  Unlock wallet success when passcodeStatus is true, return **authorizationKey**. Unlock wallet fail when passcodeStatus was false.
 * **Return reject**: Never.
 * **passcode** <[string](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)> (length > 5)
+* **profileVerHook: React.Dispatch\<React.SetStateAction\<number>>** The number of remote new version updates **c**ompare the current local version.
 
 **platformStatus** will be update to **UNLOCKED** when passcode success.
 
