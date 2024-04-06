@@ -181,6 +181,7 @@ type purchaseStatus =
 **platform.prePurchase(nodes: number, amount: number, purchaseProfile: profile, payAssetName: string)**
 
 * **Returns:** Promise<\[gasPrice: string, estimateFee string, nodeAvailable: boolean, availableNodes: number]>
+* **All is null**: Insufficient wallet assets cannot complete transfer.
 * **gasPrice:** Number of [GWAI unit](https://www.investopedia.com/terms/g/gwei-ethereum.asp)
 * **estimateFee:** Number of ETH unit
 * **nodeAvailable:** True = Purchase can be finish , False = no available nodes can be purchase.
