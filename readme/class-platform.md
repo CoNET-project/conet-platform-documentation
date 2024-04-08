@@ -40,6 +40,20 @@ interface profile {
 }
 ```
 
+
+
+### React Hooks
+
+**listeningVersionHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
+
+Number will be changed when profile was updated.
+
+**listeningAssetsHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
+
+Number will be changed when assets balance was updated.
+
+### Class Platform
+
 **new platform(platformStatus, workerLoading)**
 
 * setPlatformStatus: [React.Dispatch](https://react-redux.js.org/api/hooks)\<React.SetStateAction\<type\_platformStatus>>
