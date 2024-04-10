@@ -206,7 +206,7 @@ type purchaseStatus =
 
 **platform.getTransferGas(amount: string, profile: profile, payAssetName: string)**
 
-**Returns:** Promise<\[gasPrice: string, estimateFee string]> null return for sufficient assets.
+**Returns:** Promise<\[fixed Amount, gasPrice: string, estimateFee string]> null return for sufficient assets.
 
 Error: Network unavailable.
 
