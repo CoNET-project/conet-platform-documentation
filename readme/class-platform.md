@@ -204,9 +204,17 @@ type purchaseStatus =
 
 
 
-**platform.getTransferGas(amount: number, profile: profile, payAssetName: string)**
+**platform.getTransferGas(amount: string, profile: profile, payAssetName: string)**
 
 **Returns:** Promise<\[gasPrice: string, estimateFee string]> null return for sufficient assets.
+
+Error: Network unavailable.
+
+
+
+**platform.transferAsset(amount: string, profile: profile, payAssetName: string)**
+
+**Returns:** Promise<\[boolean]>true for transfer success.
 
 Error: Network unavailable.
 
