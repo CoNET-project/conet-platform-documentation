@@ -48,9 +48,26 @@ interface profile {
 
 Number will be changed when profile was updated.
 
+
+
 **listeningAssetsHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
 
 Number will be changed when assets balance was updated.
+
+
+
+**listeningGuardianPurchaseHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
+
+Number will be changed when status changed.
+
+* 1 => Transferring asset to CONET Guardian.
+* 2 => Waiting for transfer to be confirmed.
+* 3 => Waiting for purchase to be confirmed by CONET.
+* 4 => Purchase completed.&#x20;
+* \-1 => Token transfer failed.
+* \-2, TX => Purchase declined by CONET (please connect CONET team with this TX)
+
+
 
 ### Class Platform
 
