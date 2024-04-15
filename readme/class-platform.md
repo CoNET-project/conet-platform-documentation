@@ -44,19 +44,19 @@ interface profile {
 
 ### React Hooks
 
-**listeningVersionHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
+**listeningVersionHook (**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
 
 Number will be changed when profile was updated.
 
 
 
-**listeningAssetsHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
+**listeningAssetsHook (**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
 
 Number will be changed when assets balance was updated.
 
 
 
-**listeningGuardianPurchaseHook(**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
+**listeningGuardianPurchaseHook (**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
 
 Number will be changed when status changed.
 
