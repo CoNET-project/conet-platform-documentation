@@ -221,6 +221,15 @@ type purchaseStatus =
 
 
 
+**platform.guardianPurchase(nodes: number, amount: number, purchaseProfile: profile, payAssetName: string)**
+
+* **Returns:** Promise<\[]>
+* **All is null**: Insufficient wallet assets cannot complete transfer.
+* Error: Network unavailable.
+* process status please see the HOOK : **listeningGuardianPurchaseHook**
+
+
+
 **platform.getTransferGas(amount: string, profile: profile, payAssetName: string)**
 
 **Returns:** Promise<\[fixed Amount, gasPrice: string, estimateFee string]> null return for sufficient assets.
