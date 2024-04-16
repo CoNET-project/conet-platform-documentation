@@ -35,7 +35,8 @@ interface profile {
 	pgpKey: pgpKey				//
 	privateKeyArmor: string			//	Wallet private key
 	tokens: token[]
-	isNode?: boolean				
+	isNode?: boolean
+					
 	data?: any				//	UI custom data, like nickname
 	
 }
@@ -260,6 +261,13 @@ Price = {
 ```
 
 * **Return reject**: Never.
+
+
+
+**platform.fx168PrePurchase(nodes: number)**
+
+* **Returns:** Promise<\[hash: string]> The hash will return when success.
+* Error: INVALID\_DATA. When nodes <1
 
 
 
