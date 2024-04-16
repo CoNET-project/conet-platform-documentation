@@ -35,6 +35,7 @@ interface profile {
 	pgpKey: pgpKey				//
 	privateKeyArmor: string			//	Wallet private key
 	tokens: token[]
+	isNode?: boolean				
 	data?: any				//	UI custom data, like nickname
 	
 }
