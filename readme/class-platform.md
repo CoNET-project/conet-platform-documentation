@@ -61,7 +61,7 @@ Number will be changed when assets balance was updated.
 **listeningMiningHook(**miningHook: React.Dispatch\<React.SetStateAction\<mining>>**)**
 
 ```typescript
-{
+interface mining {
     blockNumber: number
     CCNTP_total_balance: string
     Updated_balace: string                //    CCNTP_total_balance - Last_balance
