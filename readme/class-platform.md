@@ -199,18 +199,10 @@ Class platform will get authorization key from backend which can access user pri
 
 **platform.startMining(**authorizationKey, profile: profile**)**
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>type status = 'CONET_Server_Unreachable'|'Multiple_IP_address_rejection'|'success'
+<pre class="language-typescript"><code class="lang-typescript"><strong>type status = 'success'|'Err_Server_Unreachable'|'Err_Multiple_IP'
 </strong></code></pre>
 
 * **Returns:** Promise\<status: number>
-
-
-
-*
-
-
-
-
 
 
 
