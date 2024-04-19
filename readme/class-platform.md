@@ -58,6 +58,20 @@ Number will be changed when assets balance was updated.
 
 
 
+**listeningMiningHook(**miningHook: React.Dispatch\<React.SetStateAction\<mining>>**)**
+
+```typescript
+{
+    blockNumber: number
+    CCNTP_total_balance: string
+    Updated_balace: string                //    CCNTP_total_balance - Last_balance
+    status: 'mining'|'stoped'
+    profile: profile
+}
+```
+
+
+
 **listeningGuardianPurchaseHook (**profileVerHook: React.Dispatch\<React.SetStateAction\<number>>**)**
 
 Number will be changed when status changed.
@@ -180,6 +194,23 @@ Class platform will get authorization key from backend which can access user pri
 * **Return resolve**: All profiles or null array (when authorizationKey is illegal.)
 * **Return reject**: Never.
 * **Require:** Class platform has complete authorization.
+
+
+
+**platform.startMining(**authorizationKey, profile: profile**)**
+
+<pre class="language-typescript"><code class="lang-typescript"><strong>type status = 'CONET_Server_Unreachable'|'Multiple_IP_address_rejection'|'success'
+</strong></code></pre>
+
+* **Returns:** Promise\<status: number>
+
+
+
+*
+
+
+
+
 
 
 
