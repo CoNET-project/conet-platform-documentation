@@ -289,8 +289,16 @@ Price = {
 
 **platform.fx168PrePurchase(nodes: number)**
 
-* **Returns:** Promise<\[hash: string]> The hash will return when success.
+* **Returns:** Promise\<orders: fx168Order\[]> The hash will return when success.
 * Error: INVALID\_DATA. When nodes <1
+
+```typescript
+interface fx168Order {
+    id: string
+    status: string
+    nodes: string
+}
+```
 
 
 
