@@ -205,9 +205,14 @@ Class platform will get authorization key from backend which can access user pri
 </strong></code></pre>
 
 * **Returns:** Promise\<status: number>
-*
 
 
+
+**platform.stopMining()**
+
+* **Returns:** Promise\<profile\[]>
+* **Return resolve**: null
+* **Return reject**: Never.
 
 ### No security credentials required functions
 
