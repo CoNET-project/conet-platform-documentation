@@ -234,7 +234,7 @@ Class platform will get authorization key from backend which can access user pri
 
 
 
-**platform.claimToken(token:assetName: string)**
+**platform.claimToken(profile: profile, assetName: string)**
 
 * **Returns:** Promise<\[boolean]>
 * **All is null**: Insufficient wallet assets cannot complete transfer.
